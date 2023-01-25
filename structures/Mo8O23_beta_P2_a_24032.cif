@@ -1,0 +1,78 @@
+data_24032-ICSD
+#©2017 by Fachinformationszentrum Karlsruhe, and the U.S. Secretary of 
+#Commerce on behalf of the United States.  All rights reserved.
+_database_code_ICSD                24032
+_audit_creation_date               1986/09/25
+_audit_update_record               2012/02/01
+_chemical_name_systematic          'Molybdenum Oxide (8/23) - Beta'
+_chemical_formula_structural       'Mo8 O23'
+_chemical_formula_sum              'Mo8 O23'
+_publ_section_title
+;
+The Crystal Structures of Mo9 O26 (beta'-Molybdenum Oxide) and Mo8 
+O23 (beta - Molybdenum Oxide)
+;
+loop_
+_citation_id
+_citation_journal_abbrev
+_citation_year
+_citation_journal_volume
+_citation_journal_issue
+_citation_page_first
+_citation_page_last
+_citation_journal_id_ASTM
+primary 'Acta Chemica Scandinavica (1-27,1973-42,1988)' 1948 2 * 501 517 ACSAA4
+_publ_author_name                  'Magneli, A.'
+_cell_length_a                     16.8
+_cell_length_b                     4.04
+_cell_length_c                     13.4
+_cell_angle_alpha                  90.
+_cell_angle_beta                   106.5
+_cell_angle_gamma                  90.
+_cell_volume                       872.03
+_cell_formula_units_Z              2
+_symmetry_space_group_name_H-M     'P 1 2/a 1'
+_symmetry_Int_Tables_number        13
+_symmetry_cell_setting             monoclinic
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+  1	'x+1/2, -y, z'
+  2	'-x, -y, -z'
+  3	'-x+1/2, y, -z'
+  4	'x, y, z'
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Mo5.75+	5.75
+O2-	-2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+Mo1 Mo5.75+ 4 g 0.415(30) 0.59(4) 0.063(30) 1. 0 
+Mo2 Mo5.75+ 4 g 0.246(30) 0.41(4) 0.188(30) 1. 0 
+Mo3 Mo5.75+ 4 g 0.077(30) 0.59(4) 0.316(30) 1. 0 
+Mo4 Mo5.75+ 4 g 0.404(30) 0.41(4) 0.445(30) 1. 0 
+O1 O2- 4 g 0.415 0.06 0.065 1. 0 
+O2 O2- 4 g 0.245 0.94 0.19 1. 0 
+O3 O2- 4 g 0.075 0.06 0.315 1. 0 
+O4 O2- 4 g 0.405 0.94 0.445 1. 0 
+O5 O2- 2 c 0 0.5 0 1. 0 
+O6 O2- 4 g 0.165 0.5 0.065 1. 0 
+O7 O2- 4 g 0.335 0.5 0.135 1. 0 
+O8 O2- 4 g 0.495 0.5 0.195 1. 0 
+O9 O2- 4 g 0.17 0.5 0.27 1. 0 
+O10 O2- 4 g 0.325 0.49 0.325 1. 0 
+O11 O2- 4 g 0.005 0.5 0.405 1. 0 
+O12 O2- 4 g 0.16 0.5 0.46 1. 0 
+
+#End of data_24032-ICSD
+
+

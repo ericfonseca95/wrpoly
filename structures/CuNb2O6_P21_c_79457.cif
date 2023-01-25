@@ -1,0 +1,75 @@
+data_79457-ICSD
+#©2017 by Fachinformationszentrum Karlsruhe, and the U.S. Secretary of 
+#Commerce on behalf of the United States.  All rights reserved.
+_database_code_ICSD                79457
+_audit_creation_date               1996/10/14
+_chemical_name_systematic          'Copper Diniobate'
+_chemical_formula_structural       'Cu (Nb2 O6)'
+_chemical_formula_sum              'Cu1 Nb2 O6'
+_publ_section_title
+;
+Structural relations in mixed oxides Cux Zn1-x Nb2 O6
+;
+loop_
+_citation_id
+_citation_journal_abbrev
+_citation_year
+_citation_journal_volume
+_citation_journal_issue
+_citation_page_first
+_citation_page_last
+_citation_journal_id_ASTM
+primary 'Journal of Solid State Chemistry' 1995 115 * 476 483 JSSCBI
+_publ_author_name
+;
+Norwig, J.;Weitzel, H.;Paulus, H.;Lautenschlaeger, G.;Rodriguez 
+Carvajal, J.;Fuess, H.
+;
+_cell_length_a                     5.0064(1)
+_cell_length_b                     14.1733(3)
+_cell_length_c                     5.7615(1)
+_cell_angle_alpha                  90.
+_cell_angle_beta                   91.672(1)
+_cell_angle_gamma                  90.
+_cell_volume                       408.65
+_cell_formula_units_Z              4
+_symmetry_space_group_name_H-M     'P 1 21/c 1'
+_symmetry_Int_Tables_number        14
+_refine_ls_R_factor_all            0.037
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+  1	'x, -y+1/2, z+1/2'
+  2	'-x, -y, -z'
+  3	'-x, y+1/2, -z+1/2'
+  4	'x, y, z'
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Cu2+	2
+Nb5+	5
+O2-	-2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+_atom_site_B_iso_or_equiv
+Cu1 Cu2+ 4 e 0.2502(7) 0.0002(3) 0.3420(5) 1. 0 0.58(5) 
+Nb1 Nb5+ 4 e 0.7370(6) 0.1607(2) 0.2037(4) 1. 0 0.19(5) 
+Nb2 Nb5+ 4 e 0.2353(6) 0.1615(2) 0.8466(4) 1. 0 0.25(6) 
+O1 O2- 4 e 0.0627(8) 0.0965(3) 0.1378(6) 1. 0 0.33(7) 
+O2 O2- 4 e 0.5737(9) 0.0781(3) 0.4009(6) 1. 0 0.47(8) 
+O3 O2- 4 e 0.4037(8) 0.2451(2) 0.1448(4) 1. 0 0.29(7) 
+O4 O2- 4 e 0.9002(9) 0.2448(3) 0.9086(5) 1. 0 0.47(7) 
+O5 O2- 4 e 0.5560(9) 0.0969(3) 0.9229(6) 1. 0 0.54(8) 
+O6 O2- 4 e 0.0643(9) 0.0799(3) 0.6519(6) 1. 0 0.69(8) 
+
+#End of data_79457-ICSD
+
+

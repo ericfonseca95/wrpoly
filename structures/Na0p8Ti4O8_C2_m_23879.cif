@@ -1,0 +1,72 @@
+
+#(C) 2019 by FIZ Karlsruhe - Leibniz Institute for Information Infrastructure.  All rights reserved.
+data_23879-ICSD
+_database_code_ICSD 23879
+_audit_creation_date 1980-01-01
+_audit_update_record 2012-02-01
+_chemical_name_systematic 'Sodium titanium oxide (0.8/4/8)'
+_chemical_formula_structural 'Na0.8 Ti4 O8'
+_chemical_formula_sum 'Na0.8 O8 Ti4'
+_chemical_name_structure_type NaTi4O8
+_exptl_crystal_density_diffrn 3.88
+_publ_section_title 'Nax Ti4 O8, an alkali metal titanium dioxide bronze'
+loop_
+_citation_id
+_citation_journal_full
+_citation_year
+_citation_journal_volume
+_citation_page_first
+_citation_page_last
+_citation_journal_id_ASTM
+primary 'Acta Crystallographica' 1962 15 201 206 ACCRA9
+loop_
+_publ_author_name
+'Andersson, S.'
+'Wadsley, A.D.'
+_cell_length_a 12.146(2)
+_cell_length_b 3.862(2)
+_cell_length_c 6.451(2)
+_cell_angle_alpha 90.
+_cell_angle_beta 106.85(5)
+_cell_angle_gamma 90.
+_cell_volume 289.61
+_cell_formula_units_Z 2
+_symmetry_space_group_name_H-M 'C 1 2/m 1'
+_symmetry_Int_Tables_number 12
+_refine_ls_R_factor_all 0.167
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 '-x, y, -z'
+2 '-x, -y, -z'
+3 'x, -y, z'
+4 'x, y, z'
+5 '-x+1/2, y+1/2, -z'
+6 '-x+1/2, -y+1/2, -z'
+7 'x+1/2, -y+1/2, z'
+8 'x+1/2, y+1/2, z'
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Na1+ 1
+Ti3+ 3.8
+O2- -2
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_B_iso_or_equiv
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+Na1 Na1+ 2 a 0 0 0 0.6 0.8 0
+Ti1 Ti3+ 4 i 0.2907(9) 0 0.709(2) 0.6 1. 0
+Ti2 Ti3+ 4 i 0.395(1) 0 0.300(2) 0.6 1. 0
+O1 O2- 4 i 0.371(3) 0 0.996(6) 0.6 1. 0
+O2 O2- 4 i 0.239(4) 0 0.358(7) 0.6 1. 0
+O3 O2- 4 i 0.430(3) 0 0.624(7) 0.6 1. 0
+O4 O2- 4 i 0.149(4) 0 0.698(7) 0.6 1. 0
+#End of TTdata_23879-ICSD

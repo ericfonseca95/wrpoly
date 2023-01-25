@@ -1,0 +1,123 @@
+data_251797-ICSD
+#©2017 by Fachinformationszentrum Karlsruhe, and the U.S. Secretary of 
+#Commerce on behalf of the United States.  All rights reserved.
+_database_code_ICSD                251797
+_audit_creation_date               2016/02/01
+_chemical_name_systematic          'Titanium(IV) Ditantalate(V)'
+_chemical_formula_structural       'Ti Ta2 O7'
+_chemical_formula_sum              'O7 Ta2 Ti1'
+_publ_section_title
+;
+Nanoindentation, high-temperature behavior, and 
+crystallographic/spectroscopic characterization of the high-
+refractive-index materials TiTa2O7 and TiNb2O7
+;
+loop_
+_citation_id
+_citation_journal_abbrev
+_citation_year
+_citation_journal_volume
+_citation_journal_issue
+_citation_page_first
+_citation_page_last
+_citation_journal_id_ASTM
+primary 'Inorganic Chemistry' 2015 54 14 6836 6848 INOCAJ
+_publ_author_name
+;
+Perfler, Lukas;Kahlenberg, Volker;Wikete, Christoph;Schmidmair, 
+Daniela;Tribus, Martina;Kaindl, Reinhard
+;
+_cell_length_a                     17.6624(12)
+_cell_length_b                     3.8012(3)
+_cell_length_c                     11.8290(9)
+_cell_angle_alpha                  90
+_cell_angle_beta                   95.135(7)
+_cell_angle_gamma                  90
+_cell_volume                       790.99
+_cell_formula_units_Z              6
+_symmetry_space_group_name_H-M     'I 1 2/m 1'
+_symmetry_Int_Tables_number        12
+_refine_ls_R_factor_all            0.0296
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+  1	'x, -y, z'
+  2	'-x, -y, -z'
+  3	'-x, y, -z'
+  4	'x, y, z'
+  5	'x+1/2, -y+1/2, z+1/2'
+  6	'-x+1/2, -y+1/2, -z+1/2'
+  7	'-x+1/2, y+1/2, -z+1/2'
+  8	'x+1/2, y+1/2, z+1/2'
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+O2-	-2
+Ta5+	5
+Ti4+	4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+_atom_site_U_iso_or_equiv
+Ta1 Ta5+ 2 a 0 0 0 0.994(3) 0 0.0086(2) 
+Ti1 Ti4+ 2 a 0 0 0 0.006(3) 0 0.0086(2) 
+Ta2 Ta5+ 4 i 0.18508(2) 0 0.18151(4) 0.860(2) 0 0.00794(17) 
+Ti2 Ti4+ 4 i 0.18508(2) 0 0.18151(4) 0.140(2) 0 0.00794(17) 
+Ta3 Ta5+ 4 i 0.07848(3) 0 -0.55590(4) 0.615(2) 0 0.0063(2) 
+Ti3 Ti4+ 4 i 0.07848(3) 0 -0.55590(4) 0.385(2) 0 0.0063(2) 
+Ta4 Ta5+ 4 i 0.88803(2) 0 0.25952(4) 0.8090(19) 0 0.00696(17) 
+Ti4 Ti4+ 4 i 0.88803(2) 0 0.25952(4) 0.1910(19) 0 0.00696(17) 
+Ta5 Ta5+ 4 i 0.29323(5) 0 -0.07387(8) 0.218(2) 0 0.0062(3) 
+Ti5 Ti4+ 4 i 0.29323(5) 0 -0.07387(8) 0.782(2) 0 0.0062(3) 
+O1 O2- 4 i 0.1732(3) 0 -0.4236(6) 1 0 0.0060(13) 
+O2 O2- 4 i 0.3722(3) 0 -0.2067(5) 1 0 0.0065(13) 
+O3 O2- 4 i 0.5969(3) 0 -0.0266(5) 1 0 0.0072(13) 
+O4 O2- 4 i 0.7914(3) 0 0.1734(5) 1 0 0.0088(14) 
+O5 O2- 4 i 0.2504(4) 0 0.0557(6) 1 0 0.0115(14) 
+O6 O2- 4 i 0.7100(4) 0 0.7064(6) 1 0 0.0071(13) 
+O7 O2- 4 i 0.8996(3) 0 -0.0838(5) 1 0 0.0105(15) 
+O8 O2- 4 i 0.0253(3) 0 -0.3917(6) 1 0 0.0086(14) 
+O9 O2- 4 i 0.8748(4) 0 0.6857(6) 1 0 0.0127(15) 
+O10 O2- 2 b 0.5 0 0.5 1 0 0.018(2) 
+O11 O2- 4 i 0.0489(4) 0 -0.1481(6) 1 0 0.0128(16) 
+
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_type_symbol
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+Ta1 Ta5+ 0.0082(3) 0.0062(3) 0.0111(3) 0 -0.0006(2) 0
+Ti1 Ti4+ 0.0082(3) 0.0062(3) 0.0111(3) 0 -0.0006(2) 0
+Ta2 Ta5+ 0.0082(3) 0.0031(2) 0.0120(3) 0 -0.00205(18) 0
+Ti2 Ti4+ 0.0082(3) 0.0031(2) 0.0120(3) 0 -0.00205(18) 0
+Ta3 Ta5+ 0.0071(3) 0.0034(3) 0.0082(3) 0 -0.0004(2) 0
+Ti3 Ti4+ 0.0071(3) 0.0034(3) 0.0082(3) 0 -0.0004(2) 0
+Ta4 Ta5+ 0.0098(3) 0.0031(2) 0.0083(2) 0 0.00196(18) 0
+Ti4 Ti4+ 0.0098(3) 0.0031(2) 0.0083(2) 0 0.00196(18) 0
+Ta5 Ta5+ 0.0063(5) 0.0025(5) 0.0100(5) 0 0.0012(4) 0
+Ti5 Ti4+ 0.0063(5) 0.0025(5) 0.0100(5) 0 0.0012(4) 0
+O1 O2- 0.006(3) 0.002(3) 0.010(3) 0 -0.0022(25) 0
+O2 O2- 0.006(3) 0.003(3) 0.010(3) 0 -0.0005(25) 0
+O3 O2- 0.008(3) 0.004(3) 0.010(3) 0 0.0021(26) 0
+O4 O2- 0.008(3) 0.008(3) 0.010(3) 0 -0.0004(27) 0
+O5 O2- 0.013(3) 0.008(3) 0.013(3) 0 -0.003(3) 0
+O6 O2- 0.007(3) 0.003(3) 0.012(3) 0 0.0006(26) 0
+O7 O2- 0.006(3) 0.012(4) 0.014(4) 0 -0.002(3) 0
+O8 O2- 0.007(3) 0.004(3) 0.014(3) 0 -0.002(3) 0
+O9 O2- 0.018(4) 0.005(3) 0.015(3) 0 -0.002(3) 0
+O10 O2- 0.029(6) 0.002(4) 0.024(6) 0 0.005(5) 0
+O11 O2- 0.019(4) 0.009(4) 0.009(3) 0 -0.002(3) 0
+#End of data_251797-ICSD
+
+

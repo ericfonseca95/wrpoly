@@ -1,0 +1,89 @@
+data_23799-ICSD
+#©2017 by Fachinformationszentrum Karlsruhe, and the U.S. Secretary of 
+#Commerce on behalf of the United States.  All rights reserved.
+_database_code_ICSD                23799
+_audit_creation_date               1980/01/01
+_audit_update_record               2004/10/01
+_chemical_name_systematic          'Tungsten Dodecaniobium Oxide'
+_chemical_formula_structural       'W Nb12 O33'
+_chemical_formula_sum              'Nb12 O33 W1'
+_publ_section_title
+;
+Multiple phase formation in the binary system Nb2 O5 - W O3 II. The 
+structure of the monoclinic phases W Nb12 O33 and W5 Nb16 O55
+;
+loop_
+_citation_id
+_citation_journal_abbrev
+_citation_year
+_citation_journal_volume
+_citation_journal_issue
+_citation_page_first
+_citation_page_last
+_citation_journal_id_ASTM
+primary 'Acta Crystallographica (1,1948-23,1967)' 1965 19 * 32 38 ACCRA9
+_publ_author_name                  'Roth, R.S.;Wadsley, A.D.'
+_cell_length_a                     22.37
+_cell_length_b                     3.825
+_cell_length_c                     17.87
+_cell_angle_alpha                  90.
+_cell_angle_beta                   123.6
+_cell_angle_gamma                  90.
+_cell_volume                       1273.58
+_cell_formula_units_Z              2
+_symmetry_space_group_name_H-M     'C 1 2 1'
+_symmetry_Int_Tables_number        5
+_symmetry_cell_setting             monoclinic
+_refine_ls_R_factor_all            0.131
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+  1	'-x, y, -z'
+  2	'x, y, z'
+  3	'-x+1/2, y+1/2, -z'
+  4	'x+1/2, y+1/2, z'
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Nb5+	5
+O2-	-2
+W6+	6
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+_atom_site_B_iso_or_equiv
+W1 W6+ 2 a 0 0.25 0 1. 0 0.3 
+Nb1 Nb5+ 4 c 0.3663(2) 0 0.0423(2) 1. 0 0.3 
+Nb2 Nb5+ 4 c 0.2475(2) 0 0.1358(2) 1. 0 0.3 
+Nb3 Nb5+ 4 c 0.1282(2) 0 0.2298(2) 1. 0 0.3 
+Nb4 Nb5+ 4 c 0.4165(2) 0 0.3793(2) 1. 0 0.3 
+Nb5 Nb5+ 4 c 0.2957(2) 0 0.4715(2) 1. 0 0.3 
+Nb6 Nb5+ 4 c 0.4619(2) 0 0.7122(2) 1. 0 0.3 
+O1 O2- 2 b 0 0.5 0.5 1. 0 0.3 
+O2 O2- 4 c 0.1573(29) 0 0.0147(36) 1. 0 0.3 
+O3 O2- 4 c 0.3051(29) 0 0.0836(36) 1. 0 0.3 
+O4 O2- 4 c 0.0324(29) 0 0.0937(36) 1. 0 0.3 
+O5 O2- 4 c 0.4554(29) 0 0.1583(36) 1. 0 0.3 
+O6 O2- 4 c 0.1836(29) 0 0.1789(36) 1. 0 0.3 
+O7 O2- 4 c 0.0563(29) 0 0.2569(36) 1. 0 0.3 
+O8 O2- 4 c 0.3321(29) 0 0.2572(36) 1. 0 0.3 
+O9 O2- 4 c 0.4720(29) 0 0.3247(36) 1. 0 0.3 
+O10 O2- 4 c 0.2080(29) 0 0.3498(36) 1. 0 0.3 
+O11 O2- 4 c 0.3572(29) 0 0.4294(36) 1. 0 0.3 
+O12 O2- 4 c 0.2384(29) 0 0.5188(36) 1. 0 0.3 
+O13 O2- 4 c 0.3789(29) 0 0.5937(36) 1. 0 0.3 
+O14 O2- 4 c 0.0835(29) 0 0.6207(36) 1. 0 0.3 
+O15 O2- 4 c 0.4070(29) 0 0.7570(36) 1. 0 0.3 
+O16 O2- 4 c 0.2936(29) 0 0.9217(36) 1. 0 0.3 
+O17 O2- 4 c 0.4320(29) 0 0.9867(36) 1. 0 0.3 
+
+#End of data_23799-ICSD
+
+

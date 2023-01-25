@@ -1,0 +1,8 @@
+setup.py
+wrpoly/__init__.py
+wrpoly/wrpoly.py
+wrpoly.egg-info/PKG-INFO
+wrpoly.egg-info/SOURCES.txt
+wrpoly.egg-info/dependency_links.txt
+wrpoly.egg-info/requires.txt
+wrpoly.egg-info/top_level.txt

@@ -1,0 +1,89 @@
+data_16375-ICSD
+#©2017 by Fachinformationszentrum Karlsruhe, and the U.S. Secretary of 
+#Commerce on behalf of the United States.  All rights reserved.
+_database_code_ICSD                16375
+_audit_creation_date               1980/12/31
+_audit_update_record               2012/08/01
+_chemical_name_systematic
+;
+Tripotassium Pentatitanium Tantalum Oxide
+;
+_chemical_formula_structural       'K3 Ti5 Ta O14'
+_chemical_formula_sum              'K3 O14 Ta1 Ti5'
+_publ_section_title
+;
+Layer Structure: The Oxides A3 Ti5 M O14
+;
+loop_
+_citation_id
+_citation_journal_abbrev
+_citation_year
+_citation_journal_volume
+_citation_journal_issue
+_citation_page_first
+_citation_page_last
+_citation_journal_id_ASTM
+primary 'Journal of Solid State Chemistry' 1980 35 * 200 206 JSSCBI
+_publ_author_name
+;
+Hervieu, M.;Rebbah, A.;Desgardin, G.;Raveau, B.
+;
+_cell_length_a                     18.363(2)
+_cell_length_b                     3.791(1)
+_cell_length_c                     9.174(1)
+_cell_angle_alpha                  90.
+_cell_angle_beta                   101.28(1)
+_cell_angle_gamma                  90.
+_cell_volume                       626.3
+_cell_formula_units_Z              2
+_symmetry_space_group_name_H-M     'C 1 2/m 1'
+_symmetry_Int_Tables_number        12
+_refine_ls_R_factor_all            0.07
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+  1	'-x, y, -z'
+  2	'-x, -y, -z'
+  3	'x, -y, z'
+  4	'x, y, z'
+  5	'-x+1/2, y+1/2, -z'
+  6	'-x+1/2, -y+1/2, -z'
+  7	'x+1/2, -y+1/2, z'
+  8	'x+1/2, y+1/2, z'
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+K1+	1
+O2-	-2
+Ta5+	5
+Ti4+	4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_attached_hydrogens
+_atom_site_B_iso_or_equiv
+K1 K1+ 4 i -.010(2) 0 0.054(4) 0.5 0 1. 
+K2 K1+ 4 i 0.0806(6) 0 0.623(2) 1. 0 0.99 
+Ti1 Ti4+ 4 i 0.6253(3) 0 0.321(1) 0.6 0 0.4 
+Ta1 Ta5+ 4 i 0.6253(3) 0 0.321(1) 0.4 0 0.4 
+Ti2 Ti4+ 4 i 0.6784(6) 0 0.020(2) 0.95 0 0.98 
+Ta2 Ta5+ 4 i 0.6784(6) 0 0.020(2) 0.05 0 0.98 
+Ti3 Ti4+ 4 i 0.7310(6) 0 0.716(1) 0.95 0 1.2 
+Ta3 Ta5+ 4 i 0.7310(6) 0 0.716(1) 0.05 0 1.2 
+O1 O2- 4 i 0.528(2) 0 0.387(4) 1. 0 1. 
+O2 O2- 4 i 0.600(1) 0 0.104(3) 1. 0 1. 
+O3 O2- 4 i 0.651(1) 0 0.801(4) 1. 0 1. 
+O4 O2- 4 i 0.683(1) 0 0.524(4) 1. 0 1. 
+O5 O2- 4 i 0.741(1) 0 0.250(3) 1. 0 1. 
+O6 O2- 4 i 0.794(1) 0 0.981(4) 1. 0 1. 
+O7 O2- 4 i 0.848(1) 0 0.661(4) 1. 0 1. 
+
+#End of data_16375-ICSD
+
+
