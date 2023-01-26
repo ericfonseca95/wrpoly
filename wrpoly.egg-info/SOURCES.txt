@@ -1,3 +1,5 @@
+LICENSE
+README.md
 setup.py
 wrpoly/__init__.py
 wrpoly/wrpoly.py

@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from pymatgen.core import Structure
 from scipy.stats import skew
 from scipy.spatial import ConvexHull
+import dask
+import robocrys as rc
 
 """
 This code is a set of functions that analyze a given pymatgen Structure object in order to extract information about the transition metal-oxygen bond lengths and polyhedra in the structure. The main functions are: 
@@ -280,3 +282,141 @@ def theoretical_gravimetric_capacity(structure):
     molar_mass = structure.composition.reduced_composition.weight
     Q = np.mean([F*i/3.6/molar_mass for i in oxy_diffs])
     return Q
+
+##### SLOPPY CODE ADDITION ####
+### summary: new code added with robocrys!
+### DATE:/26/2023, we need to reconstruct this to fix the redudancy in the code
+### using the new robocrys functions we need update the volume functions as well 
+# we need to combine the dataframes into one dataframe but keeping track of the structure they came from
+# lets make a staggered dataframe with the structure name as the index
+# turn the above into a function that loads a structure and returns a dataframe of the sites
+
+import numpy as np
+
+
+def clean_pym_struc(structure):
+    structure.merge_sites()
+    #structure.remove_oxidation_states()
+    return structure
+
+def extract_site_df(structure, condensor):
+    con_test = condensor.condense_structure(structure)
+    site_dict  = con_test['sites']
+    # there is a dict of dicts, so we need to convert it to a list of dicts
+    sites_dicts = [site_dict[i] for i in site_dict.keys()]
+    sites_df = pd.DataFrame(sites_dicts)
+    geo2 = [[sites_df['geometry'][i][j] for j in sites_df['geometry'][i].keys()] for i in sites_df['geometry'].keys()]
+    nnn2 = [[sites_df['nnn'][i][j] for j in sites_df['nnn'][i].keys()] for i in sites_df['nnn'].keys()]
+    sites_df = sites_df.drop(['geometry', 'nnn'], axis=1)
+    sites_df = sites_df.assign(geometry=geo2)
+    sites_df['polyhedra'] = [i[0] for i in sites_df['geometry']]
+    sites_df['polyhedra_likeness'] = [i[1] for i in sites_df['geometry']]
+    sites_df = sites_df.drop('geometry', axis=1)
+    sites_df['symmetry'] = [con_test['spg_symbol'] for i in range(len(sites_df))]
+    sites_df['formula'] = [con_test['formula'] for i in range(len(sites_df))]
+    sites_df['crystal_system'] = [con_test['crystal_system'] for i in range(len(sites_df))]
+    df = sites_df
+    return df
+
+def get_df_robocrys(structure):
+    condensor = rc.StructureCondenser()
+    con_test = condensor.condense_structure(structure)
+    site_dict  = con_test['sites']
+    print(con_test)
+    # there is a dict of dicts, so we need to convert it to a list of dicts
+    df = extract_site_df(structure, condensor)
+    return df
+
+def read_df(filename):
+    pym_structure = get_structure(filename)
+    filename = filename.split('/')[-1]
+    #pym_structure = clean_pym_struc(get_structure(filename))
+    print('read pymatgen structure for ', filename)
+    rc_structure = get_df_robocrys(pym_structure)
+    print('read robocrys dataframe for ', filename)
+    rc_structure['structure'] = [pym_structure for i in range(len(rc_structure))]
+    print('appending data together for ', filename)
+    return rc_structure
+
+def fix_robo_df(df):
+    # for each row in the dataframe, we need to get the element name and from the element name. The current element name could contain the oxidation state. 
+    # we need to remove the oxidation state and add it to the oxidation state column. It is written as 3+ or 3-. in the dataframe make it a float
+    # to get the elem name we need to split the string where the first number appears
+    split_pos = [[i for i, value in enumerate(list_value) if value.isdigit()][0] for list_value in df['element'].tolist()]
+
+    elems = [df['element'][i][:split_pos[i]] for i in range(len(df['element']))]
+
+    oxidation_states = [df['element'][i][split_pos[i]:] for i in range(len(df['element']))]
+
+    structures = df['structure']
+    # if there is a '+' in the name then we can take the numerical value as positive, if there is a '-' then we can take the numerical value as negative. It is possible 
+    # that the value is 0, in which case we can just take the value as 0
+    oxidation_value = [float(oxidation_states[i][:-1]) if oxidation_states[i][-1] == '+' else -float(oxidation_states[i][:-1]) if oxidation_states[i][-1] == '-' else 0 for i in range(len(oxidation_states))]
+
+    df['center_atom'] = elems
+
+    df['oxidation_state'] = oxidation_value
+
+    #df['mean_nn_distance'] = [np.mean(get_neighbor_bond_lengths(df)) for i in range(len(df['nn']))]
+
+    df['distortion_index'] = get_distortion_index(df)
+    df['quadratic_elongation'] = get_quadratic_elongation(df)
+    df['mean_nn_distance'] = get_mean_nn_distance(df)
+    return df
+
+def get_neighbor_bond_lengths(df):
+    # get the octahedral sites
+    structure = df['structure'].iloc[0]
+
+    center_atoms = df['center_atom']
+    # get all the sites that contain the center atom
+    center_sites = [[i for i, value in enumerate(structure.sites) if center_atoms[j] in value.species_string] for j in range(len(center_atoms))]
+
+    # depending on the len of "nn" we will grab the n smallest bond lengths for the oct site row in the distance matrix
+    nn_number = [len(df['nn'][i]) for i in range(len(df['nn']))]
+    center_rows = [structure.distance_matrix[i,:] for i in center_sites]
+    # now we need to get the n smallest bond lengths for each row
+    nearest_neighbors = [np.sort(center_rows[i])[:nn_number[i]] for i in range(len(center_rows))]
+    #print(nearest_neighbors[0])
+    # remove the first value as this is the distance to itself
+    nearest_neighbors = [nearest_neighbors[i][0][1:] for i in range(len(nearest_neighbors))]
+    #print(nearest_neighbors[0])
+    return nearest_neighbors
+
+def get_distortion_index(df):
+    nearest_neighbors = get_neighbor_bond_lengths(df)
+    bond_lengths = nearest_neighbors
+    nn_number = [len(nearest_neighbors[i]) for i in range(len(nearest_neighbors))]
+    mean_bond_length = [np.mean(bond_lengths[i]) for i in range(len(bond_lengths))]
+    D = [np.sum((bond_lengths[i] - mean_bond_length[i])/mean_bond_length[i])/len(bond_lengths[i]) for i in range(len(bond_lengths))]
+    return D
+
+def get_l0(df):
+    nearest_neighbors = get_neighbor_bond_lengths(nearest_neighbors)
+    bond_lengths = nearest_neighbors
+    nn_number = [len(nearest_neighbors[i]) for i in range(len(nearest_neighbors))]
+    mean_bond_length = [np.mean(bond_lengths[i]) for i in range(len(bond_lengths))]
+    # we will assume that l0 is the mean bond length
+    return mean_bond_length
+
+def get_quadratic_elongation(df):
+    nearest_neighbors = get_neighbor_bond_lengths(df)
+    bond_lengths = nearest_neighbors
+    nn_number = [len(nearest_neighbors[i]) for i in range(len(nearest_neighbors))]
+    mean_bond_length = [np.mean(bond_lengths[i]) for i in range(len(bond_lengths))]
+    Q = [np.sum((bond_lengths[i]/mean_bond_length[i])**2)/len(bond_lengths[i]) for i in range(len(bond_lengths))]
+    return Q
+
+def get_mean_nn_distance(df):
+    bond_lengths = get_neighbor_bond_lengths(df)
+    return [np.mean(bond_lengths[i]) for i in range(len(bond_lengths))]
+
+
+###### USE THIS ONE TO DIRECTLY READ THE DATAFRAME FROM THE FILE
+def read(filename):
+    try:
+        df = read_df(filename)
+        df = fix_robo_df(df)
+    except:
+        df = pd.DataFrame()
+    return df
